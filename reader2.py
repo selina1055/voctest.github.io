@@ -27,6 +27,7 @@ class Reader():
     def login_or_signup(self,account=''):
         """輸入名字"""
         user_name = input('姓名:')
+        self.account = user_name
         put_markdown('# %s,您好!'%user_name)
 
     
