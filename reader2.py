@@ -27,11 +27,9 @@ class Reader():
     def login_or_signup(self,account=''):
         """輸入名字"""
         user_name = input('姓名:')
-        self.account = user_name
+        self.account=user_name
         put_markdown('# %s,您好!'%user_name)
 
-    
-        
     def type_op(self,o):
         """選擇測驗類型"""
         if o == 'a':
@@ -234,8 +232,6 @@ class Reader():
         'employee':'受雇者',
         'expertise':'專門技術或知識'}
 
-
-                
     def op_one(self):
         """看英辨中"""
         import random
@@ -280,10 +276,6 @@ class Reader():
                 self.words.remove(ques) 
         popup('%s,你的成績是%s!'%(self.account,score))
 
-    
-
-            
-
 from pywebio.output import *
 from pywebio.input import *
 from pywebio import start_server
@@ -295,25 +287,34 @@ from functools import partial
 
 def startbutton():
     reader = Reader()
-    reader.login_or_signup()
-    put_button(label='人物篇', onclick=partial(reader.type_op,o='a'))
-    put_button(label='辦公室篇', onclick=partial(reader.type_op,o='b'))
-    put_button(label='人事管理篇', onclick=partial(reader.type_op,o='c'))
-    put_button(label='薪資金錢篇', onclick=partial(reader.type_op,o='d'))
-    put_button(label='業務篇',onclick=partial(reader.type_op,o='e'))
-    put_button(label='財務篇', onclick=partial(reader.type_op,o='f'))
-    put_button(label='貿易篇', onclick=partial(reader.type_op,o='g'))
-    put_button(label='會議篇', onclick=partial(reader.type_op,o='h'))
-    put_text(reader.divider)
-    put_button(label='看英辨中',color= 'warning',onclick=reader.op_one)
-    put_button(label='看中辨英',color= 'warning',onclick=reader.op_two)
-    put_text(reader.divider)
+    with use_scope('exit'):
+        reader.login_or_signup()
+        put_button(label='人物篇',onclick=partial(reader.type_op,o='a'))
+        put_button(label='辦公室篇',onclick=partial(reader.type_op,o='b'))
+        put_button(label='人事管理篇',onclick=partial(reader.type_op,o='c'))
+        put_button(label='薪資金錢篇',onclick=partial(reader.type_op,o='d'))
+        put_button(label='業務篇',onclick=partial(reader.type_op,o='e'))
+        put_button(label='財務篇',onclick=partial(reader.type_op,o='f'))
+        put_button(label='貿易篇',onclick=partial(reader.type_op,o='g'))
+        put_button(label='會議篇',onclick=partial(reader.type_op,o='h'))
+        put_text(reader.divider)
+        put_button(label='看英辨中',color='info',onclick=reader.op_one)
+        put_button(label='看中辨英',color='info',onclick=reader.op_two)
+        put_text(reader.divider)
+        put_button(label='離開',color='secondary',onclick=exit)
+        put_text(reader.divider)
+        with use_scope('start',clear=True):
+            pass
 
-
-    
+def exit():
+    with use_scope('exit',clear=True):
+        reader=Reader()
+        put_text(reader.divider)
+        put_button(label='開始測驗',color='success',onclick=startbutton)
+        put_text(reader.divider)
 
 def voctest():
-    put_markdown('# 多益單字測驗(人物篇)')
+    put_markdown('# 多益單字測驗')
     put_info("""TOEIC多益是一種英文檢定，考試內容範圍以職場商業英語為主
 
 許多大學商管科系及研究所會將多益成績列為畢業門檻之一。而且不少公司徵才需要考量英語能力時，亦會參考採認多益成績
@@ -322,9 +323,11 @@ def voctest():
     put_info('每次測驗共5題，每題20分，共100分。')
     put_image('https://shopee.tw/blog/wp-content/uploads/2019/11/toeic.jpg',title='取自網路',width='40%')
     reader = Reader()
-    put_text(reader.divider)
-    put_button(label='開始測驗',color='success',onclick=startbutton)
-    put_text(reader.divider)
+    with use_scope('start'):
+        put_text(reader.divider)
+        put_button(label='開始測驗',color='success',onclick=startbutton)
+        put_text(reader.divider)
+    
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
@@ -339,15 +342,3 @@ if __name__ == "__main__":
     application.listen(port=80, address='localhost')
     tornado.ioloop.IOLoop.current().start()
     session.hold()
-
-
-            
-            
-            
-
-            
-            
-        
-            
-
-    
