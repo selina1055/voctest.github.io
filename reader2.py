@@ -308,10 +308,8 @@ def startbutton():
 
 def exit():
     with use_scope('exit',clear=True):
-        reader=Reader()
-        put_text(reader.divider)
-        put_button(label='開始測驗',color='success',onclick=startbutton)
-        put_text(reader.divider)
+        use_scope('start')
+        
 
 def voctest():
     put_markdown('# 多益單字測驗')
