@@ -1,4 +1,3 @@
-
 class Reader():
     def __init__(self):
         self.account = ''
@@ -42,7 +41,6 @@ class Reader():
         'supplier':'供應商',
         'account':'客戶',
         'receptionist':'接待員',
-        'board_of_directors':'董事會',
         'spectator':'參觀者',
         'applicant':'申請人',
         'supervisor':'管理者',
@@ -123,117 +121,117 @@ class Reader():
         'expertise':'專門技術或知識'}
         elif o == 'd':
             toast("您選擇了薪資金錢篇")
-            self.dictionary = {'allocate':'撥出',
-        'applicant':'申請人',
-        'authorize':'授權',
-        'capability':'能力',
-        'lay_off':'暫時解雇',
-        'collaboration':'合作',
-        'consultation':'諮詢',
-        'curriculum_vitae':'履歷',
-        'eligible':'合格的',
-        'emplyer':'雇主',
-        'executive':'行政或管理人員',
-        'appoint':'任命',
-        'benefit':'有益於',
-        'candidate':'候選人',
-        'certificate':'證書',
-        'competent':'有能力的',
-        'coordinate':'協調',
-        'deadline':'截至期限',
-        'employee':'受雇者',
-        'expertise':'專門技術或知識'}
+            self.dictionary = {
+        'subsidy':'補助金',
+        'income':'收入',
+        'evaluation':'估價',
+        'occupation':'職業',
+        'part-time':'兼職的',
+        'permanent':'永久的',
+        'promote':'促銷',
+        'recruit':'徵募',
+        'resume':'履歷表',
+        'salary':'薪水',
+        'annuity':'年金',
+        'penalty':'罰金',
+        'deposit':'押金',
+        'overtime':'超時',
+        'pension':'退休金',
+        'rent':'租金',
+        'recommendation':'辭職',
+        'retire':'退休',
+        'remuneration':'報酬'}
         elif o == 'e':
             toast("您選擇了業務篇")
-            self.dictionary = {'allocate':'撥出',
-        'applicant':'申請人',
-        'authorize':'授權',
-        'capability':'能力',
-        'lay_off':'暫時解雇',
-        'collaboration':'合作',
-        'consultation':'諮詢',
-        'curriculum_vitae':'履歷',
-        'eligible':'合格的',
-        'emplyer':'雇主',
-        'executive':'行政或管理人員',
-        'appoint':'任命',
-        'benefit':'有益於',
-        'candidate':'候選人',
-        'certificate':'證書',
-        'competent':'有能力的',
-        'coordinate':'協調',
-        'deadline':'截至期限',
-        'employee':'受雇者',
-        'expertise':'專門技術或知識'}
+            self.dictionary = {
+        'accrue':'產生',
+        'acquisition':'獲得',
+        'amplify':'放大',
+        'asset':'優點',
+        'corporation':'公司',
+        'cutback':'減少',
+        'enterprise':'企業',
+        'equity':'公平',
+        'financier':'財政家',
+        'integrate':'統合',
+        'merger':'合併',
+        'pending':'未決定的',
+        'preliminary':'初步的',
+        'propose':'提議',
+        'prospect':'期望',
+        'prosperity':'繁榮',
+        'scheme':'計畫',
+        'thrive':'茂盛',
+        'undervalue':'看輕'}
         elif o == 'f':
             toast("您選擇了財務篇")
-            self.dictionary = {'allocate':'撥出',
-        'applicant':'申請人',
-        'authorize':'授權',
-        'capability':'能力',
-        'lay_off':'暫時解雇',
-        'collaboration':'合作',
-        'consultation':'諮詢',
-        'curriculum_vitae':'履歷',
-        'eligible':'合格的',
-        'emplyer':'雇主',
-        'executive':'行政或管理人員',
-        'appoint':'任命',
-        'benefit':'有益於',
-        'candidate':'候選人',
-        'certificate':'證書',
-        'competent':'有能力的',
-        'coordinate':'協調',
-        'deadline':'截至期限',
-        'employee':'受雇者',
-        'expertise':'專門技術或知識'}
+            self.dictionary = {
+        'applicant':'帳目',
+        'balance':'餘額',
+        'bond':'債券',
+        'credit':'信用',
+        'debt':'債務',
+        'deficit':'虧損額',
+        'depreciation':'貶值',
+        'devaluation':'貶值',
+        'endorse':'贊同',
+        'exempt':'豁免的',
+        'expense':'消耗',
+        'fluctuation':'波動',
+        'gross':'全部的',
+        'inflation':'通貨膨脹',
+        'overdraft':'透支額',
+        'profit':'利潤',
+        'revenue':'收益',
+        'stock':'股票',
+        'withdrawl':'取回'}
         elif o == 'g':
             toast("您選擇了貿易篇")
-            self.dictionary = {'allocate':'撥出',
-        'applicant':'申請人',
-        'authorize':'授權',
-        'capability':'能力',
-        'lay_off':'暫時解雇',
-        'collaboration':'合作',
-        'consultation':'諮詢',
-        'curriculum_vitae':'履歷',
-        'eligible':'合格的',
-        'emplyer':'雇主',
-        'executive':'行政或管理人員',
-        'appoint':'任命',
-        'benefit':'有益於',
-        'candidate':'候選人',
-        'certificate':'證書',
-        'competent':'有能力的',
-        'coordinate':'協調',
-        'deadline':'截至期限',
-        'employee':'受雇者',
-        'expertise':'專門技術或知識'}
+            self.dictionary = {
+        'bid':'出價',
+        'commercial':'商業化的',
+        'competitor':'競爭者',
+        'consolidate':'結合',
+        'contract':'契約',
+        'corporate':'公司的',
+        'credible':'可信的',
+        'earnings':'薪水',
+        'export':'出口',
+        'haggle':'討價還價',
+        'import':'進口',
+        'invoice':'發票',
+        'stock':'存貨',
+        'payment':'支付',
+        'quote':'報價',
+        'supply':'供應',
+        'tariff':'關稅',
+        'voucher':'憑證',}
         elif o == 'h':
             toast("您選擇了會議篇")
-            self.dictionary = {'allocate':'撥出',
-        'applicant':'申請人',
-        'authorize':'授權',
-        'capability':'能力',
-        'lay_off':'暫時解雇',
-        'collaboration':'合作',
-        'consultation':'諮詢',
-        'curriculum_vitae':'履歷',
-        'eligible':'合格的',
-        'emplyer':'雇主',
-        'executive':'行政或管理人員',
-        'appoint':'任命',
-        'benefit':'有益於',
-        'candidate':'候選人',
-        'certificate':'證書',
-        'competent':'有能力的',
-        'coordinate':'協調',
-        'deadline':'截至期限',
-        'employee':'受雇者',
-        'expertise':'專門技術或知識'}
+            self.dictionary = {
+        'adjourn':'暫時',
+        'agreement':'同意',
+        'amendment':'修正',
+        'approval':'贊成',
+        'attentive':'注意的',
+        'board':'理事會',
+        'brainstorm':'腦力激蕩',
+        'concede':'容忍',
+        'conference':'會議',
+        'convention':'大會',
+        'convince':'使信服',
+        'delegate':'代表',
+        'demand':'要求',
+        'dispute':'爭端',
+        'negotiation':'協商',
+        'persuade':'說服',
+        'postpone':'延期',
+        'reconcile':'調和',
+        'settlement':'協議'}
 
     def op_one(self):
         """看英辨中"""
+        toast("您選擇了看英辨中")
         import random
         score = 0
         self.words = []
@@ -255,6 +253,7 @@ class Reader():
 
     def op_two(self):
         """看中辨英"""
+        toast("您選擇了看英辨中")
         import random
         score = 0
         self.words = []
@@ -289,17 +288,17 @@ def startbutton():
     reader = Reader()
     with use_scope('exit'):
         reader.login_or_signup()
-        put_button(label='人物篇',onclick=partial(reader.type_op,o='a'))
-        put_button(label='辦公室篇',onclick=partial(reader.type_op,o='b'))
-        put_button(label='人事管理篇',onclick=partial(reader.type_op,o='c'))
-        put_button(label='薪資金錢篇',onclick=partial(reader.type_op,o='d'))
-        put_button(label='業務篇',onclick=partial(reader.type_op,o='e'))
-        put_button(label='財務篇',onclick=partial(reader.type_op,o='f'))
-        put_button(label='貿易篇',onclick=partial(reader.type_op,o='g'))
-        put_button(label='會議篇',onclick=partial(reader.type_op,o='h'))
+        put_button(label='人物篇',color='info',onclick=partial(reader.type_op,o='a'))
+        put_button(label='辦公室篇',color='info',onclick=partial(reader.type_op,o='b'))
+        put_button(label='人事管理篇',color='info',onclick=partial(reader.type_op,o='c'))
+        put_button(label='薪資金錢篇',color='info',onclick=partial(reader.type_op,o='d'))
+        put_button(label='業務篇',color='info',onclick=partial(reader.type_op,o='e'))
+        put_button(label='財務篇',color='info',onclick=partial(reader.type_op,o='f'))
+        put_button(label='貿易篇',color='info',onclick=partial(reader.type_op,o='g'))
+        put_button(label='會議篇',color='info',onclick=partial(reader.type_op,o='h'))
         put_text(reader.divider)
-        put_button(label='看英辨中',color='info',onclick=reader.op_one)
-        put_button(label='看中辨英',color='info',onclick=reader.op_two)
+        put_button(label='看英辨中',color='danger',onclick=reader.op_one)
+        put_button(label='看中辨英',color='danger',onclick=reader.op_two)
         put_text(reader.divider)
         put_button(label='離開',color='secondary',onclick=exit)
         put_text(reader.divider)
@@ -307,8 +306,12 @@ def startbutton():
             pass
 
 def exit():
+    reader = Reader()
     with use_scope('exit',clear=True):
-        use_scope('start')
+        with use_scope('start'):
+            put_text(reader.divider)
+            put_button(label='開始測驗',color='success',onclick=startbutton)
+            put_text(reader.divider)
         
 
 def voctest():
